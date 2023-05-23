@@ -6,8 +6,14 @@ function changePokemon() {
   } else {
     pokemon = "피카츄";
   }
+  const changeButton = document.getElementById("changeButton");
   const pokemonElement = document.getElementById("pokemon");
   pokemonElement.textContent = pokemon;
+  changeButton.textContent = pokemon;
+  setTimeout(() => {
+    const pokemonContainer = document.getElementById("pokemonContainer");
+    pokemonContainer.innerHTML = "<h1> 포켓몬은 포켓몬이지!! </h1>";
+  }, 2000);
 }
 
 // DOMContentLoaded 이벤트는 HTML 문서를 로드하고 DOM 트리를 완성했을 때 발생
